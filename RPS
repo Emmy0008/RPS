@@ -1,0 +1,36 @@
+from random import randint
+
+rock = "r"
+paper = "p"
+scissors = "s"
+
+t = ["rock", "paper", "scissors"]
+
+my_action = False
+comp_action=t[randint(0,2)]
+
+while my_action==False:
+    my_action = input("rock, paper, scissors?")
+
+    if my_action == comp_action:
+        print ("wow, it's a tie,  restart game" + my_action)
+
+    if my_action == "rock":
+        if comp_action == "scissors":
+            print ("You Win!!! ROCK SMASHES SCISSORS")
+        else:
+            print ("Computer WINS!!! Paper Covers ROCK")
+        
+    elif my_action == "paper":
+        if comp_action == "rock":
+            print ("You Win!!! PAPER COVERS ROCK")
+        else:
+            print ("Computer WINS!!! SCISSORS CUTS PAPER")
+
+    elif my_action == "scissors":
+        if comp_action == "paper":
+            print ("You Win!!! SCISSORS CUTS PAPER")
+        else:
+            print ("Computer WINS!!! ROCK SMASHES SCISSORS")
+    my_action = False
+    comp_action = t[randint(0,2)]
